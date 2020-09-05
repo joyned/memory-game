@@ -1,8 +1,16 @@
 .image-box {
     height: 100%;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px #aaaaaa;
+
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    position: absolute;
+    z-index: 1000;
 }
 
 .unselected {
@@ -13,6 +21,19 @@
     border: solid 3px red;
 }
 
+.flip {
+    transform: rotateY(180deg);
+}
+
 .disable {
     opacity: 10%;
+}
+
+.back {
+    height: 100%;
+    width: 7.2em;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    position: absolute;
 }

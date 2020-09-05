@@ -81,7 +81,6 @@ export class Tab1Page implements OnInit {
     const secondItem = itens[1];
 
     if (firstItem.value === secondItem.value) {
-      this.disableSelectedItens(firstItem, secondItem);
       this.score++;
     } else {
       this.resetSelectedItem(firstItem);
@@ -104,7 +103,7 @@ export class Tab1Page implements OnInit {
           mi.selected = false;
         }
       });
-    }, 500);
+    }, 1000);
   }
 
   private disableSelectedItens(firstItem: MemoryItem, secondItem: MemoryItem) {

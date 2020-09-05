@@ -10,10 +10,15 @@
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let item of memoryItensList" size="4" size-md style="height: 8em;">
-        <div [ngClass]="item.selected ? 'image-box selected' : 'image-box unselected'" (click)="selectItem(item)">
+        <div [ngClass]="item.selected ? 'image-box selected' : 'image-box flip unselected'" (click)="selectItem(item)">
           <div [ngClass]="item.disabled ? 'image-box disable' : ''">
-            <img [src]="item.img" alt="" *ngIf="item.selected">
+            <div class="fruit-image">
+              <img [src]="item.img" alt="">
+            </div>
           </div>
+        </div>
+
+        <div class="back" (click)="selectItem(item)">
         </div>
       </ion-col>
     </ion-row>
